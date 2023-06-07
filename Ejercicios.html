@@ -5,204 +5,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Simple</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilos adicionales */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-
+        
+        .section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
         .card-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-
+        
         .card {
-            width: 300px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 10px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
             padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-
-        .card:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
+        
         .card-title {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        
+        .card-content {
             margin-bottom: 10px;
         }
-
-        .card-content {
-            margin-bottom: 20px;
-        }
-
+        
         .card-image {
+            background-size: cover;
+            background-position: center;
             width: 100%;
             height: 200px;
-            background-color: #ddd;
-            border-radius: 5px;
             margin-bottom: 10px;
-            background-size: cover;
         }
-
-        .stars {
-            display: flex;
-            justify-content: center;
+        
+        .card-content p {
+            margin: 0;
         }
-
-        .star {
-            font-size: 24px;
-            cursor: pointer;
-            color: #ccc;
-            transition: color 0.3s ease;
+        
+        .card-price,
+        .card-store {
+            margin: 0;
         }
-
-        .star.active,
-        .star:hover {
-            color: gold;
+        
+        .card-link {
+            color: #007bff;
+            text-decoration: none;
         }
-
-        #my-button {
-            display: block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #my-button:hover {
-            background-color: #45a049;
+        
+        .card-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <div class="card-container">
-        <div class="card">
-            <h3 class="card-title">Card 1</h3>
-            <div class="card-content">
-                <div class="card-image" style="background-image: url('img/simpson0.jpg');"></div>
-                <p>This is the content of Card 1.</p>
+    <button id="my-button" style="margin-bottom: 20px;">Click Me</button>
+
+    <div class="section">
+        <h1 class="section-title">Animación</h1>
+        <div class="card-container">
+            <div class="card">
+                <h3 class="card-title">Card 1</h3>
+                <div class="card-content">
+                    <div class="card-image" style="background-image: url('img/simpson0.jpg');"></div>
+                    <p>This is the content of Card 1.</p>
+                </div>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
             </div>
-            <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
+            <div class="card">
+                <h3 class="card-title">Card 2</h3>
+                <div class="card-content">
+                    <div class="card-image" style="background-image: url('img/americandad.jpg');"></div>
+                    <p>This is the content of Card 2.</p>
+                </div>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <h3 class="card-title">Card 2</h3>
-            <div class="card-content">
-                <div class="card-image" style="background-image: url('img/americandad.jpg');"></div>
-                <p>This is the content of Card 2.</p>
+            <div class="card">
+                <h3 class="card-title">Card 3</h3>
+                <div class="card-content">
+                    <div class="card-image" style="background-image: url('img/futurama.jpg');"></div>
+                    <p>This is the content of Card 3.</p>
+                </div>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
             </div>
-            <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
+            <div class="card">
+                <h3 class="card-title">Card 4</h3>
+                <div class="card-content">
+                    <div class="card-image" style="background-image: url('img/familyguy.jpg');"></div>
+                    <p>This is the content of Card 4.</p>
+                </div>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <h3 class="card-title">Card 3</h3>
-            <div class="card-content">
-                <div class="card-image" style="background-image: url('img/futurama.jpg');"></div>
-                <p>This is the content of Card 3.</p>
-            </div>
-            <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-            </div>
-        </div>
-        <div class="card">
-            <h3 class="card-title">Card 4</h3>
-            <div class="card-content">
-                <div class="card-image" style="background-image: url('img/familyguy.jpg');"></div>
-                <p>This is the content of Card 4.</p>
-            </div>
-            <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-            </div>
-        </div>
-        <div class="card">
-            <h3 class="card-title">Card 5</h3>
-            <div class="card-content">
-                <div class="card-image" style="background-image: url('img/southpark.jpg');"></div>
-                <p>This is the content of Card 5.</p>
-            </div>
-            <div class="stars">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
+            <div class="card">
+                <h3 class="card-title">Card 5</h3>
+                <div class="card-content">
+                    <div class="card-image" style="background-image: url('img/southpark.jpg');"></div>
+                    <p>This is the content of Card 5.</p>
+                </div>
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <button id="my-button">Click Me</button>
+    <div class="section">
+        <h1 class="section-title">Productos</h1>
+        <div class="card-container" id="product-cards"></div>
+    </div>
 
     <script src="ejercicios.js"></script>
-
-    <div class="card-container"></div>
-
-
-
     <script>
-         // 5-Crea cuatro cards que representen un producto del mercado en el que se muestre:el nombre del producto, precio, nombre de la tienda, saber más. A través del DOM manipulation
-        // Product data
         const products = [
             {
-                name: "Product 1",
-                price: "$10.99",
-                store: "Store A",
-                url: "https://example.com/product1"
+                name: "iPhone 13",
+                price: "$799",
+                store: "Apple Store",
+                url: "https://www.apple.com/iphone-13/",
+                image: {
+                    src: "img/iphonese.jpg",
+                    width: 200,
+                    height: 200
+                }
             },
             {
-                name: "Product 2",
-                price: "$19.99",
-                store: "Store B",
-                url: "https://example.com/product2"
+                name: "iPhone 13 Pro",
+                price: "$999",
+                store: "Apple Store",
+                url: "https://www.apple.com/iphone-13-pro/",
+                image: {
+                    src: "img/iphonese.jpg",
+                    width: 200,
+                    height: 200
+                }
             },
             {
-                name: "Product 3",
-                price: "$15.49",
-                store: "Store C",
-                url: "https://example.com/product3"
+                name: "iPhone 13 Mini",
+                price: "$699",
+                store: "Apple Store",
+                url: "https://www.apple.com/iphone-13-mini/",
+                image: {
+                    src: "img/iphonese.jpg",
+                    width: 200,
+                    height: 200
+                }
             },
             {
-                name: "Product 4",
-                price: "$8.99",
-                store: "Store D",
-                url: "https://example.com/product4"
+                name: "iPhone SE",
+                price: "$399",
+                store: "Apple Store",
+                url: "https://www.apple.com/iphone-se/",
+                image: {
+                    src: "img/iphonese.jpg",
+                    width: 200,
+                    height: 200
+                }
             }
         ];
 
-        // Create cards
-        const cardContainer = document.querySelector(".card-container");
+        const cardContainer = document.getElementById("product-cards");
 
         products.forEach((product) => {
             const card = document.createElement("div");
@@ -225,7 +241,16 @@
             link.textContent = "Saber más";
             link.href = product.url;
 
+            const imageContainer = document.createElement("div");
+            imageContainer.classList.add("card-image");
+            imageContainer.style.backgroundImage = `url('${product.image.src}')`;
+            imageContainer.style.backgroundSize = "cover";
+            imageContainer.style.backgroundPosition = "center";
+            imageContainer.style.width = `${product.image.width}px`;
+            imageContainer.style.height = `${product.image.height}px`;
+
             card.appendChild(title);
+            card.appendChild(imageContainer);
             card.appendChild(price);
             card.appendChild(store);
             card.appendChild(link);
@@ -233,10 +258,6 @@
             cardContainer.appendChild(card);
         });
     </script>
-
-
-
-
 </body>
 
 </html>

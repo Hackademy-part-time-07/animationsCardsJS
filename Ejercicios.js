@@ -75,11 +75,11 @@ cards.forEach(function (card, index) {
         title.textContent = seriesFamily[0];
 
         // Crear una nueva lista
-        var list = document.createElement('ul');
+        var list = document.createElement('p');
 
         //4. Recorrer los elementos de la familia de series de TV y agregarlos a la lista
         for (var i = 1; i < seriesFamily.length; i++) {
-            var listItem = document.createElement('li');
+            var listItem = document.createElement('p');
             listItem.textContent = seriesFamily[i];
             list.appendChild(listItem);
         }
@@ -91,26 +91,3 @@ cards.forEach(function (card, index) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//4-Crea una lista de opciones en el que el título venga del HTML y los elementos de la lista se realicen a través de la manipulación del DOM.
-//Tu codigo aqui:
-
-
-
-
-
-
-//5-Crea cuatro cards que representen un producto del mercado en el que se muestre:el nombre del producto, precio, nombre de la tienda, saber más. A través del DOM manipulation.
-//Tu codigo aqui:
