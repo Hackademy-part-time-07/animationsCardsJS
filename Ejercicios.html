@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            margin-bottom: 20px;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-size: cover;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+        }
+
+        .star {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .star.active,
+        .star:hover {
+            color: gold;
+        }
+
+        #my-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #my-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <h3 class="card-title">Card 1</h3>
+            <div class="card-content">
+                <div class="card-image" style="background-image: url('img/simpson0.jpg');"></div>
+                <p>This is the content of Card 1.</p>
+            </div>
+            <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Card 2</h3>
+            <div class="card-content">
+                <div class="card-image" style="background-image: url('img/americandad.jpg');"></div>
+                <p>This is the content of Card 2.</p>
+            </div>
+            <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Card 3</h3>
+            <div class="card-content">
+                <div class="card-image" style="background-image: url('img/futurama.jpg');"></div>
+                <p>This is the content of Card 3.</p>
+            </div>
+            <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Card 4</h3>
+            <div class="card-content">
+                <div class="card-image" style="background-image: url('img/familyguy.jpg');"></div>
+                <p>This is the content of Card 4.</p>
+            </div>
+            <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Card 5</h3>
+            <div class="card-content">
+                <div class="card-image" style="background-image: url('img/southpark.jpg');"></div>
+                <p>This is the content of Card 5.</p>
+            </div>
+            <div class="stars">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+    </div>
+
+    <button id="my-button">Click Me</button>
+
+    <script src="ejercicios.js"></script>
+
+    <div class="card-container"></div>
+
+
+
+    <script>
+         // 5-Crea cuatro cards que representen un producto del mercado en el que se muestre:el nombre del producto, precio, nombre de la tienda, saber más. A través del DOM manipulation
+        // Product data
+        const products = [
+            {
+                name: "Product 1",
+                price: "$10.99",
+                store: "Store A",
+                url: "https://example.com/product1"
+            },
+            {
+                name: "Product 2",
+                price: "$19.99",
+                store: "Store B",
+                url: "https://example.com/product2"
+            },
+            {
+                name: "Product 3",
+                price: "$15.49",
+                store: "Store C",
+                url: "https://example.com/product3"
+            },
+            {
+                name: "Product 4",
+                price: "$8.99",
+                store: "Store D",
+                url: "https://example.com/product4"
+            }
+        ];
+
+        // Create cards
+        const cardContainer = document.querySelector(".card-container");
+
+        products.forEach((product) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            const title = document.createElement("h3");
+            title.classList.add("card-title");
+            title.textContent = product.name;
+
+            const price = document.createElement("p");
+            price.classList.add("card-price");
+            price.textContent = "Price: " + product.price;
+
+            const store = document.createElement("p");
+            store.classList.add("card-store");
+            store.textContent = "Store: " + product.store;
+
+            const link = document.createElement("a");
+            link.classList.add("card-link");
+            link.textContent = "Saber más";
+            link.href = product.url;
+
+            card.appendChild(title);
+            card.appendChild(price);
+            card.appendChild(store);
+            card.appendChild(link);
+
+            cardContainer.appendChild(card);
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
